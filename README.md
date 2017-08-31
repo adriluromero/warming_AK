@@ -6,18 +6,18 @@
 
 #Section 1
 File name: 1_clean_trim_QC 
-1. Cleaning-trimming-fastQC of raw reads
+Step: Cleaning-trimming-fastQC of raw reads
 
 #Section 2
 File name: 2_sortmeRNA
-2. Preparing files for assembly with Trinity 
+Step: Preparing files for assembly with Trinity 
 
 #Section 3
 File name: 3_assembly_de_novo
-3. Assembly with Trinity 
+Step: Assembly with Trinity 
 
 #Section 4
 File name: 4_align_bowtie2 
-4. Alignment of reads with bowtie2 
+Step: Alignment of reads with bowtie2 
 
 
