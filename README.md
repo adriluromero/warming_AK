@@ -14,10 +14,10 @@ File name: 2_sortmeRNA
 
 #Section 3
 File name: 3_assembly_de_novo
-4. Assembly with Trinity 
+3. Assembly with Trinity 
 
 #Section 4
 File name: 4_align_bowtie2 
-5. Alignment of reads with bowtie2 
+4. Alignment of reads with bowtie2 
 
 
