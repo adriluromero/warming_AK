@@ -5,7 +5,7 @@
 #This pipeline is divided in XXXXXXXX sections, each section has a filename and a step 
 
 #Section 1
-File name: 1_clean_trim_QC
+File name: 1_clean_trim_QC 
 1. Cleaning-trimming-fastQC of raw reads
 
 #Section 2
