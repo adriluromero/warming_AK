@@ -1,0 +1,40 @@
+#warming_AK
+
+#Adriana L. Romero-Olivares' protocol for processing RNAseq data of soil 
+#Section 7 
+#File name: 7_annotate_metatranscriptome
+#Step: Annotate meta-transcriptome
+
+#Here, the annotation of the meta-transcriptome is done using the CAZy (Carbohydrate-Active EnZymes) database
+#First, use transdecoder to find coding regions within transcripts
+
+module load transdecoder/2.0.1 
+
+TransDecoder.LongOrfs -t Trinity_ALL_f.Trinity.fasta
+
+#file longest_orfs.pep will be used for downstream analyses since it contains peptide sequences for the final candidate ORFs 
+
+#run hmmscan against a reference database
+#but first, prepare hmm database for hmmscan  
+
+module load Trinotate/3.0.0
+
+hmmpress dbCAN-fam-HMMs 
+
+#four files are created: .h3m, .h3i, .h3f, and .h3p 
+
+#now run hmmscan 
+
+module load hmmer/3.0
+
+hmmscan --domtblout ALL_hmmscan_cazy.out protein_databases/dbCAN-fam-HMMs transdecoder/Trinity_ALL_f.Trinity.fasta.transdecoder_dir/longest_orfs.pep > ALL_hmmscan_cazy.log
+
+#this will create a file .domtblout with a table with target names, query names, and other useful information  
+
+
+ 
+
+
+
+
+  

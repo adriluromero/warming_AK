@@ -1,0 +1,42 @@
+#warming_AK
+
+#Adriana L. Romero-Olivares' protocol for processing RNAseq data of soil 
+#Section 1
+#File name: 1_clean_trim_QC
+#Step: Cleaning-trimming of raw reads
+
+
+#This protocol begins with raw reads from Illumina HiSeq-1TB, method: low input RNAseq with rRNA depletion using ribozero, 80-189 million reads (varies per sample)
+#sequencing conducted at the JGI 
+#raw reads format .gz downloaded from JGI platform to UCI cluster 
+
+
+#unzip .gz files 
+
+gunzip < file.gz > unzippedfile 
+
+#fastQC of samples 
+
+module load fastqc/0.11.2
+fastqc sample 
+
+#separate files into r1 and r2
+
+paste - - - - < nameoffile.fq \
+| tee >(awk 'BEGIN{FS="\t"; OFS="\n"} {if (match($1, " 1:N")) print $1,$2,$3,$4}' > file.r1.fq ) \
+| awk 'BEGIN{FS="\t"; OFS="\n"} {if (match($1, " 2:N")) print $1,$2,$3,$4}' > file.r2.fq
+
+#trim samples to remove adapters and delete low-quality sequences 
+
+module load trimmomatic/0.35
+java -jar /data/apps/trimmomatic/0.35/trimmomatic-0.35.jar PE file.r1.fq file.r2.fq file_trimmed.r1_paired.fq file_trimmed.r1_unpaired.fq file_trimmed.r2_paired.fq file_trimmed.r2_unpaired.fq ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:5 TRAILING:5 SLIDINGWINDOW:4:15 MINLEN:25
+
+#fastQC of trimmed samples 
+#make sure adapters were removed 
+#for downstream analysis will use sample file_trimmed.r1_paired.fq and file_trimmed.r2_paired.fq
+
+module load fastqc/0.11.2
+fastqc file_trimmed.r1_paired.fq
+fastqc file_trimmed.r2_paired.fq
+
+#if adapters were removed and quality of samples is good, continue to downstream analyses 

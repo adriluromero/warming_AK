@@ -1,0 +1,24 @@
+#warming_AK
+
+#Adriana L. Romero-Olivares' protocol for processing RNAseq data of soil 
+#Section 6 
+#File name: 6_diff_expresion
+#Step: Differential expression analysis 
+
+#using Trinity's toolkit run differential expression analysis using edgeR and the script "run_DE_analysis.pl"  
+
+module load trinity/r2016-2.3.2
+module load R/3.3.2
+
+/data/apps/trinity/r2016-2.3.2/Analysis/DifferentialExpression/run_DE_analysis.pl --matrix matrix.counts.matrix --method edgeR --min_reps_min_cpm 1,1 --dispersion 0.4    
+
+#next, analyze differential expression data with Trinity's toolkit script "analyze_diff_expr.pl" 
+
+module load trinity/r2017-2.4.0
+module load R/3.3.2
+
+/data/apps/trinity/r2017-2.4.0/Analysis/DifferentialExpression/analyze_diff_expr.pl --matrix matrix.TMM.EXPR.matrix -P 0.05 --output express_DF_0.05  
+
+#table with up and down regulated genes significant at p = 0.05 are in folder express_DF_0.05
+
+#next, proceed to identify contigs down and up regulated using annotated meta-transcriptome. 

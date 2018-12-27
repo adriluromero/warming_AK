@@ -1,0 +1,38 @@
+#warming_AK
+
+#Adriana L. Romero-Olivares' protocol for processing RNAseq data of soil 
+#Section 2
+#File name: 2_sortmeRNA
+#Step: Preparing files for community analysis and Trinity
+
+
+#sortmeRNA separates rDNA from samples so that you're left with two files, one with only rDNA and one with only mDNA 
+#I sorted out all rDNA (for pure mDNA file for gene expression analysis)
+#before sorting, it is important to merge files again since the input for sortmeRNA only takes a single file for paired-end reads 
+#to merge use cat 
+
+cat file_trimmed.r1_paired.fq file_trimmed.r2_paired.fq > outputfiler1r2.fq
+
+#sort sample to generate file with only messenger transcript data 
+#before sorting make sure you use indexdb_rna for each database 16s bac, arc, 23s bac, arc, euk, 18s euk, 5s rfam, 5.8s rfam 
+
+module load sortmerna/2.1
+time sortmerna --ref ./rRNA_databases/silva-euk-18s-id95.fasta,./rRNA_databases/silva-euk-18s-db.idx:\
+./rRNA_databases/silva-bac-16s-id90.fasta,./rRNA_databases/silva-bac-16s-db.idx:\
+./rRNA_databases/silva-arc-16s-id95.fasta,./rRNA_databases/silva-arc-16s-db.idx:\
+./rRNA_databases/silva-arc-23s-id98.fasta,./rRNA_databases/silva-arc-23s-db.idx:\
+./rRNA_databases/silva-bac-23s-id98.fasta,./rRNA_databases/silva-bac-23s-db.idx:\
+./rRNA_databases/silva-euk-28s-id98.fasta,./rRNA_databases/silva-euk-28s-db.idx:\
+./rRNA_databases/rfam-5s-database-id98.fasta,./rRNA_databases/rfam-5s-db.idx:\
+./rRNA_databases/rfam-5.8s-database-id98.fasta,./rRNA_databases/rfam-5.8s-db.idx --reads outputfiler1r2.fq --sam --num_alignments 1 --paired_in --fastx --aligned all_outputfiler1r2_rRNA --other all_outputfiler1r2_non_rRNA --log -v 32 -m 129229
+
+#the file other all_outputfiler1r2_non_rRNA will be used for donwstream gene expression analyses with Trinity/bowtie2
+#the aligned file "all_outputfiler1r2_rRNA" has all rRNA from all organisms but will not be used and can be discarded 
+
+#unmerge files to separate again r1 and r2 reads before downstream analysis 
+
+paste - - - - < inputfile.fastq \
+
+| tee >(awk 'BEGIN{FS="\t"; OFS="\n"} {if (match($1, " 1:N")) print $1,$2,$3,$4}' > mRNA.r1.fq ) \
+
+| awk 'BEGIN{FS="\t"; OFS="\n"} {if (match($1, " 2:N")) print $1,$2,$3,$4}' > mRNA.r2.fq

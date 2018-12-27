@@ -1,0 +1,39 @@
+#warming_AK
+
+#Adriana L. Romero-Olivares' protocol for processing RNAseq data of soil 
+#Section 8 
+#File name: 8_create_annotated_metatranscriptome
+#Step: Create annotated meta-transcriptome
+
+#This protocol creates an annotated meta-transcriptome 
+#Once it's created, follow steps 4, 5, and 6 for a list of up- and down-regulated genes
+#Follow instructions from Section 7 to create an index for your database and hmmscan for longestORFs 
+#Use .domtblout file 
+
+#First, extract column with hits using awk 
+
+awk '{print $4}' pfam_hmmscan_output.domtblout > pfam_hits_list 
+
+#modify file to remove extra lines or header of file using sed
+#this will be done by filtering out everything that doesn't contain the word TRINITY (in my case, all contigs have the word TRINITY, and that's all I want to keep) 
+
+sed -i '/TRINITY/!d' hits2 #delete all lines that don't have the word TRINITY
+
+#remove any additional info extracted with the contigs' name 
+
+sed 's/|.*//' cazy_hits_list > cazy_hits_list_2
+
+#weird step, but, rename cazy_hits_list_2 to cazy_hits_list
+
+now delete repeated lines so that you have a single hit for each protein  
+
+awk '!seen[$0]++' cazy_hits_list > cazy_hits_list_clean
+
+#generate file with fasta sequences from your meta-transcriptome 
+#this will generate a fasta file that will only have annotated contigs = an annotated meta-transcriptome  
+
+grep -v "^#" cazy_hits_list_clean | awk '{print $1}' | esl-sfetch -f Trinity_ALL_f.Trinity.fasta - > cazy_myhits.fa
+
+#proceed to step 4 using cazy_myhits.fa as your meta-transcriptome 
+#once you have the final list of genes up- and down-regulated you can see what those are using the domtblout table you used at the beginning of this protocol. 
+ 

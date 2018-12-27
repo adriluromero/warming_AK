@@ -1,0 +1,29 @@
+#warming_AK
+
+#Adriana L. Romero-Olivares' protocol for processing RNAseq data of soil 
+#Section 3
+#File name: 3_assembly_de_novo
+#Step: Asssembly with Trinity 
+
+#this protocol assembles a de novo reference meta-transcriptome 
+#uses only mDNA, output from sortmeRNA, all_outputfiler1r2_non_rRNA, after unmerging mRNA.r1.fq and mRNA.r2.fq
+#you can input all samples separately or concatenate them in a single r1 and r2 file 
+#if need to concatenate samples use 
+
+cat *.r1.fq > reads.r1.fq
+cat *.r2.fq > reads.r2.fq
+
+#to build reference de novo meta-transcriptome you will have to costumize Trinity's script, the example below is very specific for my data  
+#use at least 1 gb of max_memory per million pair-end reads
+#output HAS to say Trintiy otherwise will mark error 
+#EXAMPLE 
+
+module load trinity/r2016-2.3.2
+module load samtools/1.3
+module load java/1.8.0.51
+module load bowtie2/2.2.7
+
+Trinity --seqType fq --full_cleanup --max_memory 300G --min_kmer_cov 2 --no_bowtie --CPU 24 --SS_lib_type RF --left Trinity_input_files/all_C1-5.r1.fq,Trinity_input_files/all_C3-2.r1.fq,Trinity_input_files/C4-5_repeat.r1.fq,Trinity_input_files/all_C5-5.r1.fq,Trinity_input_files/all_W1-3.r1.fq,Trinity_input_files/all_W3-1.r1.fq,Trinity_input_files/all_W4-3.r1.fq,Trinity_input_files/all_W5-5.r1.fq --right Trinity_input_files/all_C1-5.r2.fq,Trinity_input_files/all_C3-2.r2.fq,Trinity_input_files/C4-5_repeat.r2.fq,Trinity_input_files/all_C5-5.r2.fq,Trinity_input_files/all_W1-3.r2.fq,Trinity_input_files/all_W3-1.r2.fq,Trinity_input_files/all_W4-3.r2.fq,Trinity_input_files/all_W5-5.r2.fq --output Trinity_ALL_10/Trinity_ALL_f
+
+#output will be a single fasta file: Trinity_ALL_f.Trinity.fasta
+#this file will be used for downstream analyses 
