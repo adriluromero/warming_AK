@@ -1,6 +1,5 @@
 # warming_AK
-#Adriana L. Romero-Olivares' protocol for processing RNAseq data of soil  
-#first and foremost I want to apologize to all computer scientists and everyone that's an exprienced programmer for whatever non-sense you find here. 
+#Adriana L. Romero-Olivares' protocol for processing RNAseq data of soil. 
 
 #This pipeline is divided in XXXXXXXX sections, each section has a filename and a step 
 
