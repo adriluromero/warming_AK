@@ -1,0 +1,784 @@
+##ttest Acrospermales
+
+Paired t-test
+
+data:  rank_control and rank_warmed
+t = -2.8284, df = 3, p-value = 0.06628
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -4.2503294  0.2503294
+sample estimates:
+mean of the differences 
+                     -2 
+					 
+##Agaricales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.2985, df = 3, p-value = 0.2849
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -193.25164   81.25164
+sample estimates:
+mean of the differences 
+                    -56 
+
+##Agaricostilbales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.018, df = 3, p-value = 0.3836
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -77.36485  39.86485
+sample estimates:
+mean of the differences 
+                 -18.75 
+				 
+
+##Agyriales
+				 	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -2.6001, df = 3, p-value = 0.08037
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -152.34302   15.34302
+sample estimates:
+mean of the differences 
+                  -68.5 
+				  
+#3Amylocorticiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = 1.2634, df = 3, p-value = 0.2957
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -78.60329 182.10329
+sample estimates:
+mean of the differences 
+                  51.75 
+
+
+##Archaesporales 
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.4669, df = 3, p-value = 0.2387
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -125.19491   46.19491
+sample estimates:
+mean of the differences 
+                  -39.5 
+
+##Arthoniales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -4.9134, df = 3, p-value = 0.01615
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -30.894484  -6.605516
+sample estimates:
+mean of the differences 
+                 -18.75 
+
+##Atheliales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = 0.90308, df = 3, p-value = 0.4331
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -73.827 132.327
+sample estimates:
+mean of the differences 
+                  29.25 
+				  
+##Atractiellales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.2057, df = 3, p-value = 0.3144
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -35.48571  15.98571
+sample estimates:
+mean of the differences 
+                  -9.75 
+
+##Auriculariales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.238, df = 3, p-value = 0.3038
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -93.72706  41.22706
+sample estimates:
+mean of the differences 
+                 -26.25 
+
+#Baeomycetales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.681, df = 3, p-value = 0.1913
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -174.3114   53.8114
+sample estimates:
+mean of the differences 
+                 -60.25
+
+#Blastocladiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.4921, df = 3, p-value = 0.2325
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -187.97234   67.97234
+sample estimates:
+mean of the differences 
+                    -60 
+##Boletales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = 0.6204, df = 3, p-value = 0.5789
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -67.10716  99.60716
+sample estimates:
+mean of the differences 
+                  16.25 
+
+##Boliniales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.4968, df = 3, p-value = 0.2314
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -13.28641   4.78641
+sample estimates:
+mean of the differences 
+                  -4.25 
+
+##Botryosphaeriales
+
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.5197, df = 3, p-value = 0.2259
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -142.32707   50.32707
+sample estimates:
+mean of the differences 
+                    -46 
+					
+##Calosphaeriales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.0272, df = 3, p-value = 0.3799
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -104.50227   53.50227
+sample estimates:
+mean of the differences 
+                  -25.5 
+				  
+##Candelariales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = 0.77778, df = 3, p-value = 0.4934
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -5.410504  8.910504
+sample estimates:
+mean of the differences 
+                   1.75 
+
+##Cantharellales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -2.3706, df = 3, p-value = 0.09845
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -121.22379   17.72379
+sample estimates:
+mean of the differences 
+                 -51.75 
+
+#3Caprnodiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.127, df = 3, p-value = 0.3418
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -98.46472  46.96472
+sample estimates:
+mean of the differences 
+                 -25.75 
+				 
+##Chaetophorales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -2.8194, df = 3, p-value = 0.06677
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -17.562395   1.062395
+sample estimates:
+mean of the differences 
+                  -8.25 
+
+				  ##Chaetosphaeriales
+				  	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.4084, df = 3, p-value = 0.2537
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -82.30336  31.80336
+sample estimates:
+mean of the differences 
+                 -25.25 
+				 
+#Chaetothyriales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -0.8978, df = 3, p-value = 0.4355
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -163.60909   91.60909
+sample estimates:
+mean of the differences 
+                    -36 
+
+##Chytridiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = 0.4625, df = 3, p-value = 0.6752
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -67.63036  90.63036
+sample estimates:
+mean of the differences 
+                   11.5 
+				   
+##Cladochytriales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -4.1894, df = 3, p-value = 0.0248
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -65.106605  -8.893395
+sample estimates:
+mean of the differences 
+                    -37 
+					
+##Cladophorales (same abundance)
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = NaN, df = 3, p-value = NA
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ NaN NaN
+sample estimates:
+mean of the differences 
+                      0 
+##Coniochaetales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.8611, df = 3, p-value = 0.1597
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -245.93233   64.43233
+sample estimates:
+mean of the differences 
+                 -90.75 
+				 
+##Coronophoales (Same abundance) 
+NA
+
+#Corticiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.0225, df = 3, p-value = 0.3818
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -110.00585   56.50585
+sample estimates:
+mean of the differences 
+                 -26.75 
+				 
+##Cystofilobasidiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = 0.71537, df = 3, p-value = 0.526
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -57.76473  91.26473
+sample estimates:
+mean of the differences 
+                  16.75 
+				  
+#Dacrymycetales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.5481, df = 3, p-value = 0.2193
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -236.05043   81.55043
+sample estimates:
+mean of the differences 
+                 -77.25 
+				 
+##Diaporthales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -5.4092, df = 3, p-value = 0.01239
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -69.88694 -18.11306
+sample estimates:
+mean of the differences 
+                    -44 
+					
+##Dimargaritales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = 1, df = 3, p-value = 0.391
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -0.5456116  1.0456116
+sample estimates:
+mean of the differences 
+                   0.25 
+
+				   
+##Diversisporales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.3092, df = 3, p-value = 0.2817
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -213.57175   89.07175
+sample estimates:
+mean of the differences 
+                 -62.25
+				 
+##Doassansiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -2.3238, df = 3, p-value = 0.1027
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -3.5542603  0.5542603
+sample estimates:
+mean of the differences 
+                   -1.5 
+				   
+##Dothideales
+
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -2.1991, df = 3, p-value = 0.1153
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -140.09936   25.59936
+sample estimates:
+mean of the differences 
+                 -57.25 
+
+#3Echinosteliales (same abundance) 
+NA
+
+##Endogonales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.358, df = 3, p-value = 0.2676
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -115.35021   46.35021
+sample estimates:
+mean of the differences 
+                  -34.5 
+#Entomophtorales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.6346, df = 3, p-value = 0.2006
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -239.43804   76.93804
+sample estimates:
+mean of the differences 
+                 -81.25 
+
+##Entorrhizales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -0.86311, df = 3, p-value = 0.4516
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -86.71258  49.71258
+sample estimates:
+mean of the differences 
+                  -18.5 
+
+#Entylomatales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -2.9216, df = 3, p-value = 0.06142
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -10.9688185   0.4688185
+sample estimates:
+mean of the differences 
+                  -5.25 
+
+				  
+#Erythrobasidiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.1966, df = 3, p-value = 0.3174
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -228.7225  103.7225
+sample estimates:
+mean of the differences 
+                  -62.5 
+
+#Eurotiales
+
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -8.2315, df = 3, p-value = 0.003753
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -144.55488  -63.94512
+sample estimates:
+mean of the differences 
+                -104.25 
+
+##Exobasidiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.4146, df = 3, p-value = 0.2521
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -110.48913   42.48913
+sample estimates:
+mean of the differences 
+                    -34 
+
+#3Filobasidiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.7989, df = 3, p-value = 0.1699
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -185.52921   51.52921
+sample estimates:
+mean of the differences 
+                    -67 
+
+#Geastrakes
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.7693, df = 3, p-value = 0.175
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -16.7922   4.7922
+sample estimates:
+mean of the differences 
+                     -6 
+	
+#Geoglossales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = 1.1651, df = 3, p-value = 0.3282
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -3.895638  8.395638
+sample estimates:
+mean of the differences 
+                   2.25 
+				   
+				   
+##Georgefischeriales
+
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -2.1004, df = 3, p-value = 0.1265
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -6.287869  1.287869
+sample estimates:
+mean of the differences 
+                   -2.5 
+
+#Gloeophyllales
+
+				   	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.0941, df = 3, p-value = 0.3539
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -8.794681  4.294681
+sample estimates:
+mean of the differences 
+                  -2.25 
+
+#Glomerales
+				  	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -0.18686, df = 3, p-value = 0.8637
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -117.2054  104.2054
+sample estimates:
+mean of the differences 
+                   -6.5 
+				   
+#Gomphales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = 0.4723, df = 3, p-value = 0.6689
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -10.04188  13.54188
+sample estimates:
+mean of the differences 
+                   1.75 
+
+#Harpellales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.4378, df = 3, p-value = 0.2461
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -146.20905   55.20905
+sample estimates:
+mean of the differences 
+                  -45.5 
+				  
+				  
+#Helicobasidiales(Same abundance)
+NA
+
+#Helotiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -3.4922, df = 3, p-value = 0.0397
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -107.987811   -5.012189
+sample estimates:
+mean of the differences 
+                  -56.5 
+				  
+				  
+##Hymenochaetales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.0071, df = 3, p-value = 0.3881
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -199.6762  103.6762
+sample estimates:
+mean of the differences 
+                    -48 
+					
+					
+#Hypocreales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.7255, df = 3, p-value = 0.1829
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -186.30378   55.30378
+sample estimates:
+mean of the differences 
+                  -65.5 
+				  
+#Hysterangiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.7111, df = 3, p-value = 0.1856
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -6.434846  1.934846
+sample estimates:
+mean of the differences 
+                  -2.25 
+				  
+#Hysteriales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -0.81088, df = 3, p-value = 0.4768
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -118.19181   70.19181
+sample estimates:
+mean of the differences 
+                    -24 
+
+#Jaapiales
+
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -0.52282, df = 3, p-value = 0.6373
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -31.89185  22.89185
+sample estimates:
+mean of the differences 
+                   -4.5 
+
+
+#Jahnulales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -4.4437, df = 3, p-value = 0.0212
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -9.009914 -1.490086
+sample estimates:
+mean of the differences 
+                  -5.25 
+				  
+#Kickxellales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -0.98996, df = 3, p-value = 0.3952
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -279.2259  146.7259
+sample estimates:
+mean of the differences 
+                 -66.25 
+				 
+#Lagenidiales (same abundance)
+NA 
+
+#Lecanorales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -0.68167, df = 3, p-value = 0.5444
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -185.6476  120.1476
+sample estimates:
+mean of the differences 
+                 -32.75 
+				 
+#Leucosporidiales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.434, df = 3, p-value = 0.247
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -150.50438   57.00438
+sample estimates:
+mean of the differences 
+                 -46.75 
+				 
+#Lichiniales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -2.5584, df = 3, p-value = 0.08333
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -13.463498   1.463498
+sample estimates:
+mean of the differences 
+                     -6 
+					 
+#Magnaporthales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -4.6812, df = 3, p-value = 0.01842
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -152.02501  -28.97499
+sample estimates:
+mean of the differences 
+                  -90.5 
+				  
+#Malasseziales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -14.76, df = 3, p-value = 0.0006746
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -36.16443 -23.33557
+sample estimates:
+mean of the differences 
+                 -29.75 
+#Melanosporales (same abundance)
+NA
+
+#Microascales
+	Paired t-test
+
+data:  rank_control and rank_warmed
+t = -1.6245, df = 3, p-value = 0.2027
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -48.08441  15.58441
+sample estimates:
+mean of the differences 
+                 -16.25 
+				 
+#

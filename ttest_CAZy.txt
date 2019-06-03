@@ -1,0 +1,486 @@
+#ttest AA
+Input = ("
+rank_control	rank_warmed
+1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	3
+         1	3
+         1	3
+         1	5
+         1	5
+         1	5
+         1	6
+         1	6
+         2	6
+         2	6
+         3	6
+         3	9
+         8	11
+         15	11
+         21	14
+         26	16
+         54	19
+         57	24
+         76	25
+         81	27
+         82	28
+         84	30
+         85	37
+         87	56
+         94	83
+         120	106
+         134	112
+         137	121
+         138	122
+         139	133
+         145	136
+         159	144
+         165	148
+         185	157
+         188	166
+         190	173
+         196	179
+         208	212
+ ")
+Data = read.table(textConnection(Input),header=TRUE)
+
+rank_control <- c(Data$rank_control)  
+rank_warmed <- c(Data$rank_warmed)
+
+t.test(rank_control,rank_warmed,paired=FALSE)
+
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = 0.77154, df = 116.6, p-value = 0.4419
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -14.07648  32.04315
+sample estimates:
+mean of x mean of y 
+ 48.56667  39.58333 
+
+			  
+##ttest CBM
+Input = ("
+rank_control	rank_warmed
+1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	2
+         14	4
+         16	6
+         31	7
+         41	9
+         43	10
+         49	28
+         59	38
+         64	54
+         69	71
+         96	71
+         109	72
+         114	78
+         124	88
+         153	90
+         182	123
+         183	175
+         186	189
+         233	228
+         243	241
+         
+ ")
+Data = read.table(textConnection(Input),header=TRUE)
+
+rank_control <- c(Data$rank_control)  
+rank_warmed <- c(Data$rank_warmed)
+
+t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = 0.67563, df = 85.199, p-value = 0.5011
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -18.80941  38.17305
+sample estimates:
+mean of x mean of y 
+ 46.22727  36.54545    
+
+##ttest CE
+Input = ("
+rank_control	rank_warmed
+1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         4	1
+         5	1
+         6	1
+         8	1
+         17	1
+         22	1
+         25	3
+         32	7
+         35	8
+         38	12
+         56	18
+         70	22
+         93	32
+         100	32
+         103	36
+         115	50
+         115	61
+         132	65
+         146	66
+         149	75
+         160	77
+         170	81
+         171	89
+         192	92
+         197	110
+         206	114
+         210	116
+         216	168
+         222	177
+         223	195
+         
+ ")
+Data = read.table(textConnection(Input),header=TRUE)
+
+rank_control <- c(Data$rank_control)  
+rank_warmed <- c(Data$rank_warmed)
+
+t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = 2.2124, df = 93.63, p-value = 0.02937
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+  2.793122 51.706878
+sample estimates:
+mean of x mean of y 
+ 58.28571  31.03571 
+
+				  
+##ttest GH
+Input = ("
+rank_control	rank_warmed
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+1	1
+2	1
+2	1
+2	1
+2	1
+2	1
+2	1
+2	1
+3	1
+4	1
+5	1
+23	1
+36	2
+43	4
+48	7
+67	9
+74	11
+80	18
+83	19
+106	20
+108	21
+118	22
+125	33
+129	40
+131	42
+141	44
+151	45
+152	47
+154	53
+155	58
+161	58
+172	62
+180	63
+187	68
+191	86
+203	91
+204	111
+205	113
+207	117
+209	128
+211	135
+213	143
+215	158
+219	184
+225	193
+226	236
+234	239
+  
+ ")
+Data = read.table(textConnection(Input),header=TRUE)
+
+rank_control <- c(Data$rank_control)  
+rank_warmed <- c(Data$rank_warmed)
+
+t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = 3.1162, df = 119.56, p-value = 0.002294
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ 14.59009 65.43932
+sample estimates:
+mean of x mean of y 
+ 79.91176  39.89706 
+			   
+##ttest GT
+Input = ("
+rank_control	rank_warmed
+1	1
+1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	2
+         1	3
+         1	5
+         1	5
+         2	5
+         2	5
+         2	5
+         3	6
+         3	6
+         6	6
+         6	7
+         7	8
+         7	8
+         8	9
+         9	11
+         12	13
+         17	18
+         18	19
+         22	19
+         22	21
+         29	23
+         36	24
+         37	25
+         39	33
+         46	34
+         48	42
+         60	51
+         89	55
+         97	65
+         102	73
+         127	76
+         130	79
+         147	95
+         150	98
+         164	99
+         174	101
+         176	104
+         181	105
+         194	107
+         198	119
+         199	140
+         201	156
+         202	162
+         214	169
+         217	178
+         218	200
+         224	229
+         230	231
+         235	232
+         237	240
+         238	244
+         242	245
+         
+ ")
+Data = read.table(textConnection(Input),header=TRUE)
+
+rank_control <- c(Data$rank_control)  
+rank_warmed <- c(Data$rank_warmed)
+
+t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = 0.98168, df = 169.38, p-value = 0.3277
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -11.67147  34.76238
+sample estimates:
+mean of x mean of y 
+ 57.57955  46.03409 
+			   
+##ttest PL
+Input = ("
+rank_control	rank_warmed
+1	1
+1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         1	1
+         2	1
+         4	1
+         4	1
+         4	1
+         19	1
+         52	2
+         142	4
+         163	5
+         167	45
+         220	126
+         227	221
+         
+         
+ ")
+Data = read.table(textConnection(Input),header=TRUE)
+
+rank_control <- c(Data$rank_control)  
+rank_warmed <- c(Data$rank_warmed)
+
+t.test(rank_control,rank_warmed,paired=FALSE)
+
+		Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = 1.306, df = 46.588, p-value = 0.198
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -11.50934  54.08077
+sample estimates:
+mean of x mean of y 
+ 36.46429  15.17857 
+
+			   

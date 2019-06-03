@@ -1,0 +1,163 @@
+##cellular processes and signaling
+
+Input = ("
+rank_control	rank_warmed
+         20	17
+         25	18
+         33	32
+         39	58
+         41	71
+         42	74
+         54	97
+         84	104
+         120	156
+         14	8
+         15	30
+         57	55
+         60	77
+         76	82
+         77	95
+         111	113
+         114	129
+         157	154
+         7	6
+         21	10
+         29	27
+         45	35
+         59	43
+         60	44
+         67	65
+         90	68
+         160	143
+         13	18
+         23	31
+         26	51
+         34	72
+         36	78
+         38	93
+         39	109
+         77	125
+         135	155
+         
+         ")
+Data = read.table(textConnection(Input),header=TRUE)
+
+rank_control <- c(Data$rank_control)  
+rank_warmed <- c(Data$rank_warmed)
+
+t.test(rank_control,rank_warmed,paired=FALSE)
+
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.2291, df = 69.38, p-value = 0.2232
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -32.422398   7.700176
+sample estimates:
+mean of x mean of y 
+ 58.27778  70.63889 
+
+
+
+#Information storage and processing 
+
+Input = ("
+rank_control	rank_warmed
+	 2	1
+	 22	12
+         66	108
+         121	150
+         137	165
+         4	9
+         16	132
+         102	132
+         145	147
+         159	162
+         3	2
+         24	11
+         94	70
+         146	119
+         161	144
+         1	5
+         28	19
+         49	133
+         122	149
+         141	164
+         
+         
+ ")
+Data = read.table(textConnection(Input),header=TRUE)
+
+rank_control <- c(Data$rank_control)  
+rank_warmed <- c(Data$rank_warmed)
+
+t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -0.72268, df = 37.754, p-value = 0.4743
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -55.3167  26.2167
+sample estimates:
+mean of x mean of y 
+    77.15     91.70 
+				
+				
+#Metabolism
+Input = ("
+rank_control	rank_warmed
+	 48	80
+	 61	83
+         63	96
+         72	103
+         81	105
+         87	116
+         99	128
+         117	134
+         73	110
+         89	126
+         100	130
+         101	136
+         112	142
+         115	148
+         138	152
+         139	163
+         62	46
+         75	50
+         85	56
+         88	58
+         91	64
+         92	79
+         118	86
+         124	98
+         37	107
+         40	123
+         47	127
+         52	131
+         53	140
+         69	151
+         77	153
+         106	158
+         
+ ")
+Data = read.table(textConnection(Input),header=TRUE)
+
+rank_control <- c(Data$rank_control)  
+rank_warmed <- c(Data$rank_warmed)
+
+t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -3.4976, df = 59.573, p-value = 0.0008942
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -42.64035 -11.60965
+sample estimates:
+mean of x mean of y 
+ 84.71875 111.84375
