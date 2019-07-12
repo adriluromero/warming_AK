@@ -1,6 +1,36 @@
+##p-value (equal or smaller than 0.05)
+Arthoniales (more in warmed) - 0.05
+Diaporthales (more in warmed) - 0.02
+Eurotiales (more in warmed) - same as Treseder et al 2016 - 0.009
+Jahnulales (more in warmed) - 0.009
+Magnaporthales (more in warmed) - 0.01
+Malasseziales (more in warmed) - 0.00001
+Myriangiales (more in warmed) - 0.003
+Patellariales (more in warmed) - 0.02
+Pertusariales (more in warmed) - 0.02
+Pezizales (more in warmed) - same as Treseder et al 2016 - 0.007
+Pleosporales (more in warmed) - 0.02
+Sordariales (more in warmed) - same as Treseder et al 2016 - 0.01
+Xylariales (more in warmed) - 0.009
+Lichiniales - 0.05
+
+
+
 ##ttest Acrospermales
 
-Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	3
++ 1	5
++          1	2
++          1	2
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
 t = -2.8284, df = 3, p-value = 0.06628
@@ -8,23 +38,49 @@ alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
  -4.2503294  0.2503294
 sample estimates:
-mean of the differences 
-                     -2 
+mean of x mean of y 
+        1         3 
 					 
 ##Agaricales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 111	293
++ 263	277
++          222	260
++          254	244
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.2985, df = 3, p-value = 0.2849
+t = -1.5331, df = 3.5457, p-value = 0.2089
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -193.25164   81.25164
+ -162.74901   50.74901
 sample estimates:
-mean of the differences 
-                    -56 
+mean of x mean of y 
+    212.5     268.5 
 
 ##Agaricostilbales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	75
++ 1	1
++          1	2
++          1	1
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
 t = -1.018, df = 3, p-value = 0.3836
@@ -32,74 +88,138 @@ alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
  -77.36485  39.86485
 sample estimates:
-mean of the differences 
-                 -18.75 
+mean of x mean of y 
+     1.00     19.75 
 				 
 
 ##Agyriales
-				 	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 2	73
++ 10	13
++          6	138
++          15	83
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -2.6001, df = 3, p-value = 0.08037
+t = -2.6594, df = 3.0707, p-value = 0.07451
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -152.34302   15.34302
+ -149.41483   12.41483
 sample estimates:
-mean of the differences 
-                  -68.5 
+mean of x mean of y 
+     8.25     76.75
 				  
-#3Amylocorticiales
-	Paired t-test
+##Amylocorticiales
+> Input = ("
++ rank_control	rank_warmed
++ 219	102
++ 24	48
++          32	46
++          152	24
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = 1.2634, df = 3, p-value = 0.2957
+t = 1.0285, df = 3.7204, p-value = 0.3659
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -78.60329 182.10329
+ -92.19481 195.69481
 sample estimates:
-mean of the differences 
-                  51.75 
+mean of x mean of y 
+   106.75     55.00 
+
 
 
 ##Archaesporales 
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 2	120
++ 29	44
++          40	37
++          6	34
++          
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.4669, df = 3, p-value = 0.2387
+t = -1.7587, df = 4.141, p-value = 0.151
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -125.19491   46.19491
+ -101.03098   22.03098
 sample estimates:
-mean of the differences 
-                  -39.5 
+mean of x mean of y 
+    19.25     58.75 
 
 ##Arthoniales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 2	23
++ 5	13
++          17	43
++          12	32
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -4.9134, df = 3, p-value = 0.01615
+t = -2.5903, df = 4.5636, p-value = 0.0533
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -30.894484  -6.605516
+ -37.9053193   0.4053193
 sample estimates:
-mean of the differences 
-                 -18.75 
+mean of x mean of y 
+     9.00     27.75 
 
 ##Atheliales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 4	43
++ 260	143
++          22	7
++          30	6
++          
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = 0.90308, df = 3, p-value = 0.4331
+t = 0.42621, df = 4.5743, p-value = 0.6893
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -73.827 132.327
+ -152.22  210.72
 sample estimates:
-mean of the differences 
-                  29.25 
-				  
-##Atractiellales
-	Paired t-test
-
+mean of x mean of y 
+    79.00     49.75 
 data:  rank_control and rank_warmed
 t = -1.2057, df = 3, p-value = 0.3144
 alternative hypothesis: true difference in means is not equal to 0
@@ -109,188 +229,415 @@ sample estimates:
 mean of the differences 
                   -9.75 
 
-##Auriculariales
-	Paired t-test
+##Atractelliales
+> Input = ("
++ rank_control	rank_warmed
++ 1	35
++ 1	3
++          2	3
++          2	4
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.238, df = 3, p-value = 0.3038
+t = -1.2302, df = 3.008, p-value = 0.3061
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -93.72706  41.22706
+ -34.9345  15.4345
 sample estimates:
-mean of the differences 
-                 -26.25 
+mean of x mean of y 
+     1.50     11.25 
+
+
+##Auriculariales
+> Input = ("
++ rank_control	rank_warmed
++ 6	93
++ 5	15
++ 20	39
++ 36	25
++ 
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.3934, df = 4.0196, p-value = 0.2356
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -78.45397  25.95397
+sample estimates:
+mean of x mean of y 
+    16.75     43.00 
 
 #Baeomycetales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 2	27
++ 6	20
++          12	179
++          30	65
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.681, df = 3, p-value = 0.1913
+t = -1.6158, df = 3.1696, p-value = 0.1997
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -174.3114   53.8114
+ -175.40104   54.90104
 sample estimates:
-mean of the differences 
-                 -60.25
+mean of x mean of y 
+    12.50     72.75 
 
 #Blastocladiales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 9	188
++ 61	84
++          61	96
++          70	73
++          
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.4921, df = 3, p-value = 0.2325
+t = -2.0143, df = 4.5532, p-value = 0.1057
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -187.97234   67.97234
+ -138.88727   18.88727
 sample estimates:
-mean of the differences 
-                    -60 
+mean of x mean of y 
+    50.25    110.25 
+
+
 ##Boletales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 191	241
++ 287	214
++          140	136
++          164	126
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = 0.6204, df = 3, p-value = 0.5789
+t = 0.37788, df = 5.91, p-value = 0.7187
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -67.10716  99.60716
+ -89.36567 121.86567
 sample estimates:
-mean of the differences 
-                  16.25 
+mean of x mean of y 
+   195.50    179.25 
 
 ##Boliniales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 5	6
++ 6	4
++          1	9
++          5	15
++          
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.4968, df = 3, p-value = 0.2314
+t = -1.6087, df = 4.2266, p-value = 0.1791
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -13.28641   4.78641
+ -11.432356   2.932356
 sample estimates:
-mean of the differences 
-                  -4.25 
+mean of x mean of y 
+     4.25      8.50  
 
 ##Botryosphaeriales
+> Input = ("
++ rank_control	rank_warmed
++ 107	150
++ 165	127
++          118	216
++          128	209
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
 
-	Paired t-test
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.5197, df = 3, p-value = 0.2259
+t = -1.82, df = 4.7845, p-value = 0.131
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -142.32707   50.32707
+ -111.86217   19.86217
 sample estimates:
-mean of the differences 
-                    -46 
+mean of x mean of y 
+    129.5     175.5 
 					
 ##Calosphaeriales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 42	29
++ 31	16
++          7	48
++          39	128
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.0272, df = 3, p-value = 0.3799
+t = -0.96788, df = 3.592, p-value = 0.3937
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -104.50227   53.50227
+ -102.0455   51.0455
 sample estimates:
-mean of the differences 
-                  -25.5 
+mean of x mean of y 
+    29.75     55.25 
 				  
 ##Candelariales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 3	1
++ 1	3
++          10	2
++          3	4
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = 0.77778, df = 3, p-value = 0.4934
+t = 0.8427, df = 3.6345, p-value = 0.4513
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -5.410504  8.910504
+ -4.251786  7.751786
 sample estimates:
-mean of the differences 
-                   1.75 
+mean of x mean of y 
+     4.25      2.50 
 
 ##Cantharellales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 28	137
++ 4	14
++          20	47
++          125	186
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -2.3706, df = 3, p-value = 0.09845
+t = -1.0733, df = 5.3274, p-value = 0.3293
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -121.22379   17.72379
+ -173.43996   69.93996
 sample estimates:
-mean of the differences 
-                 -51.75 
+mean of x mean of y 
+    44.25     96.00 
 
-#3Caprnodiales
-	Paired t-test
+##Capnodiales
+> Input = ("
++ rank_control	rank_warmed
++ 242	223
++ 238	240
++          192	278
++          251	285
++          
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.127, df = 3, p-value = 0.3418
+t = -1.2929, df = 5.9127, p-value = 0.2443
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -98.46472  46.96472
+ -74.6575  23.1575
 sample estimates:
-mean of the differences 
-                 -25.75 
+mean of x mean of y 
+   230.75    256.50 
 				 
 ##Chaetophorales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 2	7
++ 2	8
++          6	11
++          2	19
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -2.8194, df = 3, p-value = 0.06677
+t = -2.8472, df = 3.7967, p-value = 0.04946
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -17.562395   1.062395
+ -16.46767545  -0.03232455
 sample estimates:
-mean of the differences 
-                  -8.25 
+mean of x mean of y 
+     3.00     11.25 
 
-				  ##Chaetosphaeriales
-				  	Paired t-test
+##Chaetosphaeriales
+> Input = ("
++ rank_control	rank_warmed
++ 2	9
++ 2	8
++ 2	11
++ 17	96
++ 
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.4084, df = 3, p-value = 0.2537
+t = -1.1479, df = 3.1794, p-value = 0.33
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -82.30336  31.80336
+ -93.07352  42.57352
 sample estimates:
-mean of the differences 
-                 -25.25 
+mean of x mean of y 
+     5.75     31.00 
 				 
 #Chaetothyriales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 256	264
++ 239	190
++          152	294
++          247	290
++          
++ 
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -0.8978, df = 3, p-value = 0.4355
+t = -1.0565, df = 6, p-value = 0.3314
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -163.60909   91.60909
+ -119.37474   47.37474
 sample estimates:
-mean of the differences 
-                    -36 
+mean of x mean of y 
+    223.5     259.5 
 
 ##Chytridiales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 148	67
++ 61	70
++          53	88
++          40	31
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = 0.4625, df = 3, p-value = 0.6752
+t = 0.42126, df = 4.3434, p-value = 0.6936
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -67.63036  90.63036
+ -61.98901  84.98901
 sample estimates:
-mean of the differences 
-                   11.5 
+mean of x mean of y 
+     75.5      64.0  
 				   
 ##Cladochytriales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 153	208
++ 78	91
++          97	134
++          53	96
++          
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -4.1894, df = 3, p-value = 0.0248
+t = -1.0764, df = 5.6852, p-value = 0.3253
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -65.106605  -8.893395
+ -122.24791   48.24791
 sample estimates:
-mean of the differences 
-                    -37 
+mean of x mean of y 
+    95.25    132.25 
 					
 ##Cladophorales (same abundance)
-	Paired t-test
+	
+Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
 t = NaN, df = 3, p-value = NA
@@ -301,484 +648,2209 @@ sample estimates:
 mean of the differences 
                       0 
 ##Coniochaetales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 44	17
++ 23	232
++          121	230
++          176	248
++          
++          
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_warmed <- c(Data$rank_warmed)
+> rank_control <- c(Data$rank_control)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.8611, df = 3, p-value = 0.1597
+t = -1.3874, df = 5.11, p-value = 0.2228
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -245.93233   64.43233
+ -257.8105   76.3105
 sample estimates:
-mean of the differences 
-                 -90.75 
+mean of x mean of y 
+    91.00    181.75 
 				 
 ##Coronophoales (Same abundance) 
 NA
 
 #Corticiales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 12	112
++ 9	12
++          32	11
++          51	76
++          
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.0225, df = 3, p-value = 0.3818
+t = -0.99919, df = 3.9011, p-value = 0.3756
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -110.00585   56.50585
+ -101.82976   48.32976
 sample estimates:
-mean of the differences 
-                 -26.75 
+mean of x mean of y 
+    26.00     52.75
 				 
 ##Cystofilobasidiales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 60	50
++ 2	6
++          8	31
++          167	83
++          
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = 0.71537, df = 3, p-value = 0.526
+t = 0.40353, df = 4.0487, p-value = 0.707
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -57.76473  91.26473
+ -97.9522 131.4522
 sample estimates:
-mean of the differences 
-                  16.75 
+mean of x mean of y 
+    59.25     42.50 
 				  
 #Dacrymycetales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 2	226
++ 5	13
++          33	55
++          12	67
++          
++          
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.5481, df = 3, p-value = 0.2193
+t = -1.6357, df = 3.1342, p-value = 0.1965
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -236.05043   81.55043
+ -223.97072   69.47072
 sample estimates:
-mean of the differences 
-                 -77.25 
+mean of x mean of y 
+    13.00     90.25 
 				 
 ##Diaporthales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 7	40
++ 14	49
++          32	72
++          26	94
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -5.4092, df = 3, p-value = 0.01239
+t = -3.2876, df = 4.2488, p-value = 0.0277
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -69.88694 -18.11306
+ -80.316771  -7.683229
 sample estimates:
-mean of the differences 
-                    -44 
+mean of x mean of y 
+    19.75     63.75 
 					
 ##Dimargaritales
-	Paired t-test
-
-data:  rank_control and rank_warmed
-t = 1, df = 3, p-value = 0.391
-alternative hypothesis: true difference in means is not equal to 0
-95 percent confidence interval:
- -0.5456116  1.0456116
-sample estimates:
-mean of the differences 
-                   0.25 
+NA (same)
 
 				   
 ##Diversisporales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 4	206
++ 49	60
++          71	66
++          18	59
++          
++          
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.3092, df = 3, p-value = 0.2817
+t = -1.59, df = 4.0194, p-value = 0.1867
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -213.57175   89.07175
+ -170.74423   46.24423
 sample estimates:
-mean of the differences 
-                 -62.25
+mean of x mean of y 
+    35.50     97.75 
 				 
 ##Doassansiales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	1
++ 1	3
++          2	5
++          1	2
++          
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -2.3238, df = 3, p-value = 0.1027
+t = -1.6859, df = 3.5105, p-value = 0.177
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -3.5542603  0.5542603
+ -4.112312  1.112312
 sample estimates:
-mean of the differences 
-                   -1.5 
+mean of x mean of y 
+     1.25      2.75 
 				   
 ##Dothideales
+> Input = ("
++ rank_control	rank_warmed
++ 124	119
++ 50	89
++          87	203
++          91	170
++          
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
 
-	Paired t-test
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -2.1991, df = 3, p-value = 0.1153
+t = -1.9307, df = 4.8814, p-value = 0.1128
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -140.09936   25.59936
+ -134.03292   19.53292
 sample estimates:
-mean of the differences 
-                 -57.25 
+mean of x mean of y 
+    88.00    145.25 
 
-#3Echinosteliales (same abundance) 
+##Echinosteliales (same abundance) 
 NA
 
 ##Endogonales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 17	121
++ 10	46
++          123	108
++          66	79
++          
++          
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.358, df = 3, p-value = 0.2676
+t = -1.1124, df = 5.0912, p-value = 0.3157
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -115.35021   46.35021
+ -113.79855   44.79855
 sample estimates:
-mean of the differences 
-                  -34.5 
+mean of x mean of y 
+     54.0      88.5 
+
+
 #Entomophtorales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 55	282
++ 177	180
++ 163	212
++ 159	205
++ 
++          
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.6346, df = 3, p-value = 0.2006
+t = -2.2823, df = 5.6574, p-value = 0.06523
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -239.43804   76.93804
+ -169.653144    7.153144
 sample estimates:
-mean of the differences 
-                 -81.25 
+mean of x mean of y 
+   138.50    219.75  
 
 ##Entorrhizales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	82
++ 1	2
++          20	4
++          2	10
++          
++                 ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -0.86311, df = 3, p-value = 0.4516
+t = -0.93429, df = 3.3526, p-value = 0.4124
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -86.71258  49.71258
+ -77.92766  40.92766
 sample estimates:
-mean of the differences 
-                  -18.5 
+mean of x mean of y 
+      6.0      24.5  
 
 #Entylomatales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	11
++ 1	4
++          2	8
++          1	3
++                          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -2.9216, df = 3, p-value = 0.06142
+t = -2.8146, df = 3.1097, p-value = 0.06431
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -10.9688185   0.4688185
+ -11.0693219   0.5693219
 sample estimates:
-mean of the differences 
-                  -5.25 
+mean of x mean of y 
+     1.25      6.50 
 
 				  
 #Erythrobasidiales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 2	221
++ 1	15
++          6	20
++          3	6
++          
++                          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.1966, df = 3, p-value = 0.3174
+t = -1.2036, df = 3.0026, p-value = 0.315
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -228.7225  103.7225
+ -227.669  102.669
 sample estimates:
-mean of the differences 
-                  -62.5 
+mean of x mean of y 
+      3.0      65.5 
 
 #Eurotiales
 
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 125	217
++ 130	233
++          134	274
++          213	295
++          
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -8.2315, df = 3, p-value = 0.003753
+t = -3.7779, df = 5.8699, p-value = 0.009587
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -144.55488  -63.94512
+ -172.13668  -36.36332
 sample estimates:
-mean of the differences 
-                -104.25 
+mean of x mean of y 
+   150.50    254.75 
+
 
 ##Exobasidiales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	104
++ 23	18
++          19	28
++          4	33
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.4146, df = 3, p-value = 0.2521
+t = -1.6664, df = 3.456, p-value = 0.1821
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -110.48913   42.48913
+ -94.34455  26.34455
 sample estimates:
-mean of the differences 
-                    -34 
+mean of x mean of y 
+    11.75     45.75 
 
-#3Filobasidiales
-	Paired t-test
+##Filobasidiales
+> Input = ("
++ rank_control	rank_warmed
++ 3	47
++ 9	13
++          113	158
++          26	201
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.7989, df = 3, p-value = 0.1699
+t = -1.3038, df = 4.7789, p-value = 0.2516
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -185.52921   51.52921
+ -200.95439   66.95439
 sample estimates:
-mean of the differences 
-                    -67 
+mean of x mean of y 
+    37.75    104.75 
 
-#Geastrakes
-	Paired t-test
+#Geastrales
+> Input = ("
++ rank_control	rank_warmed
++ 1	10
++ 1	3
++          4	18
++          3	2
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.7693, df = 3, p-value = 0.175
+t = -1.5871, df = 3.2454, p-value = 0.2038
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -16.7922   4.7922
+ -17.532366   5.532366
 sample estimates:
-mean of the differences 
-                     -6 
+mean of x mean of y 
+     2.25      8.25  
 	
 #Geoglossales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 8	3
++ 2	4
++ 18	12
++ 2	2
++ 
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = 1.1651, df = 3, p-value = 0.3282
+t = 0.5098, df = 4.9405, p-value = 0.6321
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -3.895638  8.395638
+ -9.136569 13.636569
 sample estimates:
-mean of the differences 
-                   2.25 
+mean of x mean of y 
+     7.50      5.25 
 				   
 				   
 ##Georgefischeriales
 
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	7
++ 1	2
++          6	7
++          1	3
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -2.1004, df = 3, p-value = 0.1265
+t = -1.3779, df = 5.9847, p-value = 0.2175
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -6.287869  1.287869
+ -6.94218  1.94218
 sample estimates:
-mean of the differences 
-                   -2.5 
+mean of x mean of y 
+     2.25      4.75 
 
 #Gloeophyllales
 
-				   	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 7	4
++ 1	7
++          3	8
++          21	22
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.0941, df = 3, p-value = 0.3539
+t = -0.37296, df = 5.9185, p-value = 0.7222
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -8.794681  4.294681
+ -17.06138  12.56138
 sample estimates:
-mean of the differences 
-                  -2.25 
+mean of x mean of y 
+     8.00     10.25 
 
 #Glomerales
-				  	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 189	250
++ 130	124
++          114	172
++          235	148
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -0.18686, df = 3, p-value = 0.8637
+t = -0.16672, df = 5.998, p-value = 0.8731
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -117.2054  104.2054
+ -101.90842   88.90842
 sample estimates:
-mean of the differences 
-                   -6.5 
+mean of x mean of y 
+    167.0     173.5
 				   
 #Gomphales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	7
++ 20	9
++          16	12
++          4	6
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = 0.4723, df = 3, p-value = 0.6689
+t = 0.3664, df = 3.4951, p-value = 0.7352
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -10.04188  13.54188
+ -12.30175  15.80175
 sample estimates:
-mean of the differences 
-                   1.75 
+mean of x mean of y 
+    10.25      8.50 
+
 
 #Harpellales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 5	142
++ 19	31
++          66	62
++          15	52
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.4378, df = 3, p-value = 0.2461
+t = -1.6352, df = 4.7069, p-value = 0.1666
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -146.20905   55.20905
+ -118.38983   27.38983
 sample estimates:
-mean of the differences 
-                  -45.5 
+mean of x mean of y 
+    26.25     71.75 
 				  
 				  
 #Helicobasidiales(Same abundance)
 NA
 
 #Helotiales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 189	281
++ 245	291
++          284	301
++          227	298
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -3.4922, df = 3, p-value = 0.0397
+t = -2.7927, df = 3.3031, p-value = 0.06115
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -107.987811   -5.012189
+ -117.667429    4.667429
 sample estimates:
-mean of the differences 
-                  -56.5 
+mean of x mean of y 
+   236.25    292.75 
+
 				  
 				  
 ##Hymenochaetales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 30	218
++ 92	67
++          55	76
++          28	36
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.0071, df = 3, p-value = 0.3881
+t = -1.1122, df = 3.7983, p-value = 0.3314
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -199.6762  103.6762
+ -170.37287   74.37287
 sample estimates:
-mean of the differences 
-                    -48 
+mean of x mean of y 
+    51.25     99.25 
 					
 					
 #Hypocreales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 156	296
++ 225	211
++          116	236
++          257	273
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.7255, df = 3, p-value = 0.1829
+t = -1.7592, df = 4.8641, p-value = 0.1405
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -186.30378   55.30378
+ -162.01906   31.01906
 sample estimates:
-mean of the differences 
-                  -65.5 
+mean of x mean of y 
+    188.5     254.0 
 				  
 #Hysterangiales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	1
++ 1	6
++          3	7
++          1	1
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.7111, df = 3, p-value = 0.1856
+t = -1.3416, df = 3.5798, p-value = 0.2585
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -6.434846  1.934846
+ -7.129888  2.629888
 sample estimates:
-mean of the differences 
-                  -2.25 
+mean of x mean of y 
+     1.50      3.75 
+ 
 				  
 #Hysteriales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 24	14
++ 80	38
++          15	89
++          70	144
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -0.81088, df = 3, p-value = 0.4768
+t = -0.72468, df = 4.73, p-value = 0.5029
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -118.19181   70.19181
+ -110.61496   62.61496
 sample estimates:
-mean of the differences 
-                    -24 
+mean of x mean of y 
+    47.25     71.25 
+
 
 #Jaapiales
+> Input = ("
++ rank_control	rank_warmed
++ 2	31
++ 16	14
++          32	21
++          3	5
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
 
-	Paired t-test
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -0.52282, df = 3, p-value = 0.6373
+t = -0.50483, df = 5.6755, p-value = 0.6327
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -31.89185  22.89185
+ -26.61753  17.61753
 sample estimates:
-mean of the differences 
-                   -4.5 
+mean of x mean of y 
+    13.25     17.75  
 
 
 #Jahnulales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	8
++ 4	6
++          2	7
++          4	11
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -4.4437, df = 3, p-value = 0.0212
+t = -3.9925, df = 5.3472, p-value = 0.009079
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -9.009914 -1.490086
+ -8.565294 -1.934706
 sample estimates:
-mean of the differences 
-                  -5.25 
+mean of x mean of y 
+     2.75      8.00 
 				  
 #Kickxellales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 4	185
++ 27	99
++          12	147
++          194	71
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -0.98996, df = 3, p-value = 0.3952
+t = -1.2798, df = 4.7126, p-value = 0.26
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -279.2259  146.7259
+ -201.79933   69.29933
 sample estimates:
-mean of the differences 
-                 -66.25 
+mean of x mean of y 
+    59.25    125.50 
 				 
 #Lagenidiales (same abundance)
 NA 
 
 #Lecanorales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 202	228
++ 224	132
++          109	249
++          210	267
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -0.68167, df = 3, p-value = 0.5444
+t = -0.82178, df = 5.8863, p-value = 0.4432
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -185.6476  120.1476
+ -130.72435   65.22435
 sample estimates:
-mean of the differences 
-                 -32.75 
+mean of x mean of y 
+   186.25    219.00 
 				 
 #Leucosporidiales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	145
++ 1	12
++          3	11
++          3	27
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.434, df = 3, p-value = 0.247
+t = -1.4475, df = 3.0019, p-value = 0.2435
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -150.50438   57.00438
+ -149.49467   55.99467
 sample estimates:
-mean of the differences 
-                 -46.75 
+mean of x mean of y 
+     2.00     48.75 
 				 
 #Lichiniales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	8
++ 6	7
++          7	11
++          4	16
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -2.5584, df = 3, p-value = 0.08333
+t = -2.4842, df = 5.1724, p-value = 0.05393
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -13.463498   1.463498
+ -12.146812   0.146812
 sample estimates:
-mean of the differences 
-                     -6 
+mean of x mean of y 
+      4.5      1 
 					 
 #Magnaporthales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 39	99
++ 46	115
++          52	139
++          37	183
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -4.6812, df = 3, p-value = 0.01842
+t = -4.8647, df = 3.2106, p-value = 0.01415
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -152.02501  -28.97499
+ -147.5665  -33.4335
 sample estimates:
-mean of the differences 
-                  -90.5 
+mean of x mean of y 
+     43.5     134.0 
 				  
 #Malasseziales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 8	38
++ 8	40
++ 11	35
++ 12	45
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -14.76, df = 3, p-value = 0.0006746
+t = -12.71, df = 4.3644, p-value = 0.0001299
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -36.16443 -23.33557
+ -36.04047 -23.45953
 sample estimates:
-mean of the differences 
-                 -29.75 
-#Melanosporales (same abundance)
-NA
+mean of x mean of y 
+     9.75     39.50 
+
+##MElanosporales
+> Input = ("
++ rank_control	rank_warmed
++ 1	2
++ 1	1
++          1	2
++          1	1
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.7321, df = 3, p-value = 0.1817
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -1.4186931  0.4186931
+sample estimates:
+mean of x mean of y 
+      1.0       1.5 
+
+
 
 #Microascales
-	Paired t-test
+> Input = ("
++ rank_control	rank_warmed
++ 1	47
++ 10	20
++          11	16
++          2	6
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
 
 data:  rank_control and rank_warmed
-t = -1.6245, df = 3, p-value = 0.2027
+t = -1.7777, df = 3.5301, p-value = 0.1596
 alternative hypothesis: true difference in means is not equal to 0
 95 percent confidence interval:
- -48.08441  15.58441
+ -43.01959  10.51959
 sample estimates:
-mean of the differences 
-                 -16.25 
+mean of x mean of y 
+     6.00     22.25 
 				 
-#
+#Microbotryales
+> Input = ("
++ rank_control	rank_warmed
++ 1	123
++ 3	11
++          4	13
++          3	19
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.4232, df = 3.0032, p-value = 0.2498
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -125.34634   47.84634
+sample estimates:
+mean of x mean of y 
+     2.75     41.50 	 
+#Microstomatales
+> Input = ("
++ rank_control	rank_warmed
++ 5	59
++ 4	7
++          14	10
++          7	13
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.1785, df = 3.201, p-value = 0.3187
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -53.20265  23.70265
+sample estimates:
+mean of x mean of y 
+     7.50     22.25
+
+#Microthyriales
+> Input = ("
++ rank_control	rank_warmed
++ 1	4
++ 3	6
++          2	4
++          3	12
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -2.1766, df = 3.3822, p-value = 0.1075
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -10.084998   1.584998
+sample estimates:
+mean of x mean of y 
+     2.25      6.50 
+				  
+#Mixiliales
+> Input = ("
++ rank_control	rank_warmed
++ 1	42
++ 1	1
++          1	1
++          1	1
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1, df = 3, p-value = 0.391
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -42.87007  22.37007
+sample estimates:
+mean of x mean of y 
+     1.00     11.25 
+
+				 
+#Monoblepharidales
+> Input = ("
++ rank_control	rank_warmed
++ 4	178
++ 42	37
++          50	56
++          11	55
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.5925, df = 3.7195, p-value = 0.1918
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -153.11133   43.61133
+sample estimates:
+mean of x mean of y 
+    26.75     81.50 
+				 
+#Morteriellales
+> Input = ("
++ rank_control	rank_warmed
++ 306	269
++ 234	292
++          155	297
++          305	279
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -0.94019, df = 3.1874, p-value = 0.4128
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -146.42085   77.92085
+sample estimates:
+mean of x mean of y 
+   250.00    284.25 	  
+				  
+#Mucorales
+> Input = ("
++ rank_control	rank_warmed
++ 304	184
++ 54	105
++          62	146
++          303	195
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = 0.31518, df = 3.4938, p-value = 0.7705
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -193.8123  240.3123
+sample estimates:
+mean of x mean of y 
+   180.75    157.50 
+				  
+#Mycocaliciales
+> Input = ("
++ rank_control	rank_warmed
++ 85	40
++ 71	14
++          8	106
++          82	125
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -0.30484, df = 5.3098, p-value = 0.7721
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -90.54541  71.04541
+sample estimates:
+mean of x mean of y 
+    61.50     71.25 
+				  
+#Myriangiales
+> Input = ("
++ rank_control	rank_warmed
++ 7	40
++ 5	63
++          24	41
++          12	42
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -4.9497, df = 5.6413, p-value = 0.003068
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -51.82173 -17.17827
+sample estimates:
+mean of x mean of y 
+     12.0      46.5 
+				  
+#Mytilinidiales
+> Input = ("
++ rank_control	rank_warmed
++ 1	2
++ 16	6
++          19	11
++          1	20
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -0.080978, df = 5.747, p-value = 0.9382
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -15.7713  14.7713
+sample estimates:
+mean of x mean of y 
+     9.25      9.75 
+				   
+#Naohideales
+> Input = ("
++ rank_control	rank_warmed
++ 1	102
++ 1	1
++          2	1
++          2	1
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -0.98013, df = 3.0008, p-value = 0.3993
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -105.10014   55.60014
+sample estimates:
+mean of x mean of y 
+     1.50     26.25
+				 
+#Neocallimastigales
+> Input = ("
++ rank_control	rank_warmed
++ 192	9
++ 3	13
++          6	23
++          29	7
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = 0.98131, df = 3.0372, p-value = 0.398
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -98.82227 187.82227
+sample estimates:
+mean of x mean of y 
+     57.5      13.0 
+				 
+#Neolectales
+> Input = ("
++ rank_control	rank_warmed
++ 5	259
++ 25	22
++ 31	22
++ 6	33
++ 
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.1444, df = 3.0769, p-value = 0.3336
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -251.6459  117.1459
+sample estimates:
+mean of x mean of y 
+    16.75     84.00  
+				 
+#Olpidiospidales
+> Input = ("
++ rank_control	rank_warmed
++ 1	8
++ 1	2
++          4	4
++          2	2
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.2649, df = 4.4118, p-value = 0.2686
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -6.232983  2.232983
+sample estimates:
+mean of x mean of y 
+        2         4 
+
+#Onygenales
+> Input = ("
++ rank_control	rank_warmed
++ 261	289
++ 280	268
++          253	302
++          276	299
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -2.2092, df = 5.7875, p-value = 0.07086
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -46.585429   2.585429
+sample estimates:
+mean of x mean of y 
+    267.5     289.5 
+					
+#Orbiliales
+> Input = ("
++ rank_control	rank_warmed
++ 26	86
++ 99	40
++          28	133
++          72	109
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.3433, df = 5.9303, p-value = 0.2283
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -101.05455   29.55455
+sample estimates:
+mean of x mean of y 
+    56.25     92.00  
+
+				 
+#Paraglomerales
+> Input = ("
++ rank_control	rank_warmed
++ 3	24
++ 19	12
++          20	14
++          10	26
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.1239, df = 5.8934, p-value = 0.3047
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -19.120434   7.120434
+sample estimates:
+mean of x mean of y 
+       13        19 
+					 
+#Patellariales
+> Input = ("
++ rank_control	rank_warmed
++ 3	28
++ 8	63
++          38	72
++          14	52
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -3.098, df = 5.7657, p-value = 0.0223
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -68.312386  -7.687614
+sample estimates:
+mean of x mean of y 
+    15.75     53.75 
+
+#Pelitgerales
+> Input = ("
++ rank_control	rank_warmed
++ 109	96
++ 92	47
++          29	125
++          81	157
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -0.98191, df = 5.5215, p-value = 0.3672
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -101.04085   44.04085
+sample estimates:
+mean of x mean of y 
+    77.75    106.25 
+				  
+#Pertusariales
+> Input = ("
++ rank_control	rank_warmed
++ 9	76
++ 7	30
++          37	101
++          19	76
++          
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -3.2329, df = 4.2298, p-value = 0.02942
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -97.097613  -8.402387
+sample estimates:
+mean of x mean of y 
+    18.00     70.75 
+
+
+#Pezizales
+> Input = ("
++ rank_control	rank_warmed
++ 149	246
++ 167	198
++          175	258
++          173	243
++          
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -4.8702, df = 4.1658, p-value = 0.00741
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -109.67778  -30.82222
+sample estimates:
+mean of x mean of y 
+   166.00    236.25 
+				 
+#Phallales
+> Input = ("
++ rank_control	rank_warmed
++ 1	3
++ 2	2
++          1	2
++          1	1
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.5667, df = 4.9726, p-value = 0.1783
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -1.9826144  0.4826144
+sample estimates:
+mean of x mean of y 
+     1.25      2.00 
+
+#Phyllachorales
+> Input = ("
++ rank_control	rank_warmed
++ 21	214
++ 81	58
++          98	113
++          43	141
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.9177, df = 4.6149, p-value = 0.1181
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -168.01856   26.51856
+sample estimates:
+mean of x mean of y 
+    60.75    131.50 
+				 
+#Platygloeales
+> Input = ("
++ rank_control	rank_warmed
++ 1	1
++ 1	3
++          1	1
++          1	2
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.5667, df = 3, p-value = 0.2152
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -2.2734802  0.7734802
+sample estimates:
+mean of x mean of y 
+     1.00      1.75 
+				  
+#Pleosporales
+> Input = ("
++ rank_control	rank_warmed
++ 89	237
++ 150	271
++          215	252
++          143	262
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -3.9621, df = 3.4752, p-value = 0.02182
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -185.35703  -27.14297
+sample estimates:
+mean of x mean of y 
+   149.25    255.50 
+
+#Polyporales
+> Input = ("
++ rank_control	rank_warmed
++ 69	200
++ 111	166
++          176	154
++          80	95
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.3769, df = 5.9473, p-value = 0.2181
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -124.44502   34.94502
+sample estimates:
+mean of x mean of y 
+   109.00    153.75 
+
+#pucciniales
+> Input = ("
++ rank_control	rank_warmed
++ 14	181
++ 5	31
++          9	30
++          10	14
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.389, df = 3.0133, p-value = 0.2586
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -179.05905   70.05905
+sample estimates:
+mean of x mean of y 
+      9.5      64.0
+				  
+#Pyrenulales
+> Input = ("
++ rank_control	rank_warmed
++ 48	68
++ 117	30
++          14	135
++          83	173
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -0.91971, df = 5.3239, p-value = 0.3975
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -134.80632   62.80632
+sample estimates:
+mean of x mean of y 
+     65.5     101.5 
+					
+#Rhizophydiales
+> Input = ("
++ rank_control	rank_warmed
++ 31	151
++ 23	52
++          32	131
++          70	75
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -2.4807, df = 4.1833, p-value = 0.06542
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -132.832775    6.332775
+sample estimates:
+mean of x mean of y 
+    39.00    102.25 
+				 
+#Russulales
+> Input = ("
++ rank_control	rank_warmed
++ 131	122
++ 86	174
++          96	169
++          30	43
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.1187, df = 5.3282, p-value = 0.3111
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -134.30388   51.80388
+sample estimates:
+mean of x mean of y 
+    85.75    127.00 
+
+#Saccharomycetales
+> Input = ("
++ rank_control	rank_warmed
++ 300	288
++ 266	255
++          229	286
++          265	283
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -0.79115, df = 4.5801, p-value = 0.4678
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -56.43072  30.43072
+sample estimates:
+mean of x mean of y 
+      265       278  
+					
+#Schizosaccharomycetales
+> Input = ("
++ rank_control	rank_warmed
++ 30	182
++ 36	19
++          37	49
++          27	58
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.2341, df = 3.0267, p-value = 0.3043
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -158.68624   69.68624
+sample estimates:
+mean of x mean of y 
+     32.5      77.0  
+				  
+#Sebacinales
+> Input = ("
++ rank_control	rank_warmed
++ 6	196
++ 63	91
++          109	231
++          83	33
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.4266, df = 4.2981, p-value = 0.2221
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -209.82129   64.82129
+sample estimates:
+mean of x mean of y 
+    65.25    137.75 
+
+				  
+#Seotibasidiales
+> Input = ("
++ rank_control	rank_warmed
++ 1	168
++ 2	2
++          57	64
++          1	74
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.6699, df = 3.9641, p-value = 0.1709
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -164.78588   41.28588
+sample estimates:
+mean of x mean of y 
+    15.25     77.00 
+
+#Sordariales
+> Input = ("
++ rank_control	rank_warmed
++ 77	171
++ 47	215
++          103	193
++          160	284
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -3.4736, df = 5.9977, p-value = 0.01325
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -202.83451  -35.16549
+sample estimates:
+mean of x mean of y 
+    96.75    215.75 
+				   
+#Spizellomycetales
+> Input = ("
++ rank_control	rank_warmed
++ 270	272
++ 89	187
++          162	220
++          275	175
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -0.29031, df = 4.324, p-value = 0.785
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -149.1686  120.1686
+sample estimates:
+mean of x mean of y 
+    199.0     213.5 
+ 
+
+#Sporidiobolales
+> Input = ("
++ rank_control	rank_warmed
++ 2	129
++ 2	19
++ 14	38
++ 8	67
++ 
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -2.3444, df = 3.0857, p-value = 0.0984
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -132.59162   19.09162
+sample estimates:
+mean of x mean of y 
+     6.50     63.25  
+
+#Taphrinales
+> Input = ("
++ rank_control	rank_warmed
++ 20	183
++ 143	65
++          44	161
++          88	197
++          
++ 
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.9333, df = 5.9453, p-value = 0.1018
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -176.37462   20.87462
+sample estimates:
+mean of x mean of y 
+    73.75    151.50 
+
+#Thelephorales
+> Input = ("
++ rank_control	rank_warmed
++ 1	24
++ 10	52
++          199	25
++          5	3
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = 0.56082, df = 3.2572, p-value = 0.6112
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -122.9145  178.4145
+sample estimates:
+mean of x mean of y 
+    53.75     26.00 
+			
+#Tilletiales
+> Input = ("
++ rank_control	rank_warmed
++ 3	3
++ 2	4
++          4	9
++          6	11
++          
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.4208, df = 4.13, p-value = 0.2263
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -8.790345  2.790345
+sample estimates:
+mean of x mean of y 
+     3.75      6.75 
+			
+#Trechisporales
+> Input = ("
++ rank_control	rank_warmed
++ 5	9
++ 52	21
++          4	4
++          3	4
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = 0.51347, df = 3.6611, p-value = 0.637
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -29.96788  42.96788
+sample estimates:
+mean of x mean of y 
+     16.0       9.5 
+
+#Tremellales
+> Input = ("
++ rank_control	rank_warmed
++ 39	204
++ 60	61
++          67	110
++          90	103
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.737, df = 3.7177, p-value = 0.1628
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -146.93361   35.93361
+sample estimates:
+mean of x mean of y 
+     64.0     119.5
+			
+#Trypetheliales
+> Input = ("
++ rank_control	rank_warmed
++ 1	2
++ 8	6
++          3	3
++          1	2
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = 0, df = 4.7779, p-value = 1
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -4.963467  4.963467
+sample estimates:
+mean of x mean of y 
+     3.25      3.25 
+
+					
+#Umbilicariales
+> Input = ("
++ rank_control	rank_warmed
++ 4	7
++ 6	26
++ 12	207
++ 46	100
++ 
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -1.4657, df = 3.2805, p-value = 0.2315
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -208.75852   72.75852
+sample estimates:
+mean of x mean of y 
+       17        85  
+					
+#Urocystales
+> Input = ("
++ rank_control	rank_warmed
++ 1	6
++ 2	11
++          2	15
++          2	3
++          
++ 
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -2.6224, df = 3.0531, p-value = 0.07741
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -15.411845   1.411845
+sample estimates:
+mean of x mean of y 
+     1.75      8.75  
+					 
+#Ustilaginales
+> Input = ("
++ rank_control	rank_warmed
++ 9	57
++ 17	29
++          42	19
++          8	11
++          
++            ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -0.78206, df = 5.6951, p-value = 0.4654
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -41.69857  21.69857
+sample estimates:
+mean of x mean of y 
+       19        29 
+
+		
+#Wallemiales
+> Input = ("
++ rank_control	rank_warmed
++ 1	2
++ 1	2
++          2	5
++          2	4
++          
++          ")
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -2.1776, df = 3.8698, p-value = 0.09729
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -4.0111765  0.5111765
+sample estimates:
+mean of x mean of y 
+     1.50      3.25 
+			
+#Xylariales
+> Data = read.table(textConnection(Input),header=TRUE)
+> rank_control <- c(Data$rank_control)
+> rank_warmed <- c(Data$rank_warmed)
+> t.test(rank_control,rank_warmed,paired=FALSE)
+
+	Welch Two Sample t-test
+
+data:  rank_control and rank_warmed
+t = -3.8009, df = 5.9013, p-value = 0.009243
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -97.13757 -20.86243
+sample estimates:
+mean of x mean of y 
+    38.25     97.25 
