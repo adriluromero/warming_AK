@@ -1,4 +1,4 @@
-﻿#mixed effects model 
+#mixed effects model 
 #random effect = plot 
 #fixed effect = treatment 
 #fixed effect as categorical variable = gene (here CAZy)
