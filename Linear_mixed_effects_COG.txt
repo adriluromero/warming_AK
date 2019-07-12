@@ -1,4 +1,4 @@
-﻿#mixed effects model 
+#mixed effects model 
 #random effect = plot 
 #fixed effect = treatment 
 #fixed effect as categorical variable = gene (here COG) 
@@ -141,6 +141,7 @@ rank ~ treatment + COG + (1 | plot) + treatment:COG
 (1 | plot)   17 -211.53 457.06 16.417  1  5.083e-05 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
 
 
 
