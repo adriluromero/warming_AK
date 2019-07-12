@@ -1,4 +1,4 @@
-﻿#mixed effects model 
+#mixed effects model 
 #random effect = plot 
 #fixed effect = treatment 
 #fixed effect as categorical variable (here order)
@@ -1532,30 +1532,6 @@ sample estimates:
 mean of x mean of y 
    230.75    256.50 
 				 
-##Chaetophorales
-> Input = ("
-+ rank_control	rank_warmed
-+ 2	7
-+ 2	8
-+          6	11
-+          2	19
-+          
-+          ")
-> Data = read.table(textConnection(Input),header=TRUE)
-> rank_control <- c(Data$rank_control)
-> rank_warmed <- c(Data$rank_warmed)
-> t.test(rank_control,rank_warmed,paired=FALSE)
-
-	Welch Two Sample t-test
-
-data:  rank_control and rank_warmed
-t = -2.8472, df = 3.7967, p-value = 0.04946
-alternative hypothesis: true difference in means is not equal to 0
-95 percent confidence interval:
- -16.46767545  -0.03232455
-sample estimates:
-mean of x mean of y 
-     3.00     11.25 
 
 ##Chaetosphaeriales
 > Input = ("
@@ -2611,7 +2587,7 @@ sample estimates:
 mean of x mean of y 
      9.75     39.50 
 
-##MElanosporales
+##Melanosporales
 > Input = ("
 + rank_control	rank_warmed
 + 1	2
@@ -3324,7 +3300,7 @@ sample estimates:
 mean of x mean of y 
    109.00    153.75 
 
-#pucciniales
+#Pucciniales
 > Input = ("
 + rank_control	rank_warmed
 + 14	181
@@ -3505,7 +3481,7 @@ mean of x mean of y
     65.25    137.75 
 
 				  
-#Seotibasidiales
+#Septobasidiales
 > Input = ("
 + rank_control	rank_warmed
 + 1	168
