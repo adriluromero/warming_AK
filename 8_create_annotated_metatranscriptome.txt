@@ -25,7 +25,7 @@ sed 's/|.*//' cazy_hits_list > cazy_hits_list_2
 
 #weird step, but, rename cazy_hits_list_2 to cazy_hits_list
 
-now delete repeated lines so that you have a single hit for each protein  
+#now delete repeated lines so that you have a single hit for each protein  
 
 awk '!seen[$0]++' cazy_hits_list > cazy_hits_list_clean
 
