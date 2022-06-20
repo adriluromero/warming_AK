@@ -12,7 +12,7 @@
 
 #First, extract column with hits using awk 
 
-awk '{print $4}' pfam_hmmscan_output.domtblout > pfam_hits_list 
+awk '{print $4}' ALL_hmmscan_cazy.out.domtblout > cazy_hits_list 
 
 #modify file to remove extra lines or header of file using sed
 #this will be done by filtering out everything that doesn't contain the word TRINITY (in my case, all contigs have the word TRINITY, and that's all I want to keep) 
